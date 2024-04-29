@@ -1,7 +1,6 @@
 //카드==========================================================================================================
 let container = document.getElementById('cardContainer');
 
-// 카드 생성
 for (let i = 0; i < api.length; i++) {
   // 카드 생성
   let card = document.createElement('div');
@@ -9,7 +8,7 @@ for (let i = 0; i < api.length; i++) {
 
   // 제목 생성
   let title = document.createElement('h2');
-  title.textContent = api[i].title;
+  title.textContent = '📀    ' + api[i].title;
   card.appendChild(title);
 
   // 이미지 생성
@@ -18,17 +17,23 @@ for (let i = 0; i < api.length; i++) {
   card.appendChild(poster);
 
   //  별점 생성
-  let star = document.createElement('p');
+  let star = document.createElement('h3');
   star.textContent = '⭐ ' + api[i].vote_average;
   card.appendChild(star);
 
+  // id 생성
+  let id = document.createElement('p');
+  id.textContent = `- ${api[i].id} -`;
+  card.appendChild(id);
+
+  //over view 아이콘
   let overview_text = document.createElement('h3');
-  overview_text.textContent = 'Overview';
+  overview_text.textContent = '💬 Overview : ';
   card.appendChild(overview_text);
 
-  // // 내용 생성
+  // over view 생성
   let overview = document.createElement('p');
-  overview.textContent = 'Overview  :  ' + api[i].overview;
+  overview.textContent = api[i].overview;
   card.appendChild(overview);
 
   // 카드를 컨테이너에 추가
@@ -49,4 +54,3 @@ let search = function () {
     items[i].style.display = itemText.includes(text) ? '' : 'none';
   }
 };
-//헤더 리로드===============================================================================================
