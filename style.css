@@ -1,0 +1,49 @@
+/* .noto-serif-kr-regular {
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+.header {
+  color: aliceblue;
+  width: 100%;
+  height: 400px;
+  padding: 0px;
+  border: 3px solid rgb(45, 0, 0);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+
+  /*헤더 배경 */
+  background-image: url('header-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* 헤더 폰트*/
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.header_text {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 50px;
+}
+/*검색 창*/
+.search-box {
+  text-align: center;
+  margin: 30px;
+}
+#search-input {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+#search-button {
+  font-size: 20px;
+  padding: 10 px;
+  border-radius: 3px;
+  background-color: rgb(157, 5, 5);
+  color: aliceblue;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}

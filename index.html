@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Dummy</title>
+    <head>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap"
+        rel="stylesheet"
+      />
+    </head>
+  </head>
+  <body>
+    <!--헤더-->
+    <div class="header">
+      <div class="header_text">
+        <h1>Movie Dummy</h1>
+        <h5>" Record the memories "</h5>
+      </div>
+    </div>
+    <!--검색 박스-->
+    <div class="search-box">
+      <input id="search-input" type="text" placeholder="검색어를 입력하세요" />
+      <input
+        onclick="search()"
+        id="search-button"
+        type="submit"
+        value="search"
+      />
+    </div>
+    <!--카드 목록-->
+    <div id="cardContainer"></div>
+
+    <script src="dummy.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
