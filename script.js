@@ -1,7 +1,3 @@
-let search = function () {
-  alert('해당 내용을 검색합니다.');
-};
-
 //카드==============================================================================================================================
 // 컨테이너 요소 가져오기
 let container = document.getElementById('cardContainer');
@@ -35,3 +31,18 @@ for (let i = 0; i < api.length; i++) {
   // 카드를 컨테이너에 추가
   container.appendChild(card);
 }
+//검색 기능=================================================================================================
+let search = function () {
+  // 입력창과 목록 요소 가져오기
+  let input = document.getElementById('search-input');
+  let text = input.value.toLowerCase();
+  alert('영화제목에 <' + text + '>를 포함한 자료 검색');
+
+  let list = document.getElementById('cardContainer');
+  let items = list.getElementsByClassName('card');
+
+  for (let i = 0; i < api.length; i++) {
+    let itemText = api[i].title.toLowerCase();
+    items[i].style.display = itemText.includes(text) ? '' : 'none';
+  }
+};
