@@ -1,5 +1,4 @@
-//카드==============================================================================================================================
-// 컨테이너 요소 가져오기
+//카드==========================================================================================================
 let container = document.getElementById('cardContainer');
 
 // 카드 생성
@@ -23,9 +22,13 @@ for (let i = 0; i < api.length; i++) {
   star.textContent = '⭐ ' + api[i].vote_average;
   card.appendChild(star);
 
+  let overview_text = document.createElement('h3');
+  overview_text.textContent = 'Overview';
+  card.appendChild(overview_text);
+
   // // 내용 생성
   let overview = document.createElement('p');
-  overview.textContent = api[i].overview;
+  overview.textContent = 'Overview  :  ' + api[i].overview;
   card.appendChild(overview);
 
   // 카드를 컨테이너에 추가
@@ -46,3 +49,4 @@ let search = function () {
     items[i].style.display = itemText.includes(text) ? '' : 'none';
   }
 };
+//헤더 리로드===============================================================================================
