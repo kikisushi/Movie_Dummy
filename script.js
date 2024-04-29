@@ -40,7 +40,7 @@ for (let i = 0; i < api.length; i++) {
   container.appendChild(card);
 }
 //검색 기능=================================================================================================
-let search = function () {
+let search = () => {
   // 입력창과 목록 요소 가져오기
   let input = document.getElementById('search-input');
   let text = input.value.toLowerCase();
@@ -55,7 +55,7 @@ let search = function () {
   }
 };
 //엔터키로 검색
-document.addEventListener('keydown', function (event) {
+document.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
     document.getElementById('search-button').click();
   }
