@@ -54,3 +54,9 @@ let search = function () {
     items[i].style.display = itemText.includes(text) ? '' : 'none';
   }
 };
+//엔터키로 검색
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Enter') {
+    document.getElementById('search-button').click();
+  }
+});
